@@ -24,3 +24,7 @@ yarn-error.log*
 
 # contract type generation
 /contracts/types
+
+# hardhat cache & artifacts
+cache
+artifacts

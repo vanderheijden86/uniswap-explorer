@@ -24,6 +24,9 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 
 const config: HardhatUserConfig = {
   solidity: "0.7.6",
+  typechain: {
+    outDir: "./contracts/types"
+  },
   networks: {
     hardhat: {
       chainId: 1337,
