@@ -28,7 +28,7 @@ const config: HardhatUserConfig = {
     hardhat: {
       allowUnlimitedContractSize: false,
       forking: {
-        url: "https://mainnet.infura.io/v3/a6dcc991894f4e7e8d4b3dc78e724dc7",
+        url: "https://mainnet.infura.io/v3/" + process.env.INFURA_API_KEY,
       },
     },
     ropsten: {
