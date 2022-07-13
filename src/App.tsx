@@ -1,6 +1,6 @@
 import React from "react";
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 import { Container } from "react-bootstrap";
 import PoolsOverview from "./pools-overview";
 import { Web3ReactProvider } from "@web3-react/core";
