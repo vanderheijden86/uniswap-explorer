@@ -26,6 +26,7 @@ const config: HardhatUserConfig = {
   solidity: "0.7.6",
   networks: {
     hardhat: {
+      chainId: 1337,
       allowUnlimitedContractSize: false,
       forking: {
         url: "https://mainnet.infura.io/v3/" + process.env.INFURA_API_KEY,
