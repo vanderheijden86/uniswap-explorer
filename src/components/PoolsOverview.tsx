@@ -1,6 +1,6 @@
 import usePoolsOverview from "../hooks/usePoolsOverview";
 import Table from "react-bootstrap/Table";
-import "./index.css";
+import "./PoolsOverview.css";
 import NumberFormat from 'react-number-format';
 
 function PoolsOverview() {
