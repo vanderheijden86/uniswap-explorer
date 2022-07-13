@@ -2,6 +2,10 @@ import detectEthereumProvider from "@metamask/detect-provider";
 import type MetaMaskOnboarding from "@metamask/onboarding";
 import { useEffect, useRef, useState } from "react";
 
+/**
+ * Checks if  MetaMask is installed and returns functions to start or stop the Onboarding process
+ * for MetaMask
+ */
 export default function useMetaMaskOnboarding() {
   const onboarding = useRef<MetaMaskOnboarding>();
 
@@ -29,6 +33,7 @@ export default function useMetaMaskOnboarding() {
   }, []);
 
   async function startOnboarding() {
+    // only import library when needed (dynamic import)
     const MetaMaskOnboarding = await import("@metamask/onboarding").then(
       (m) => m.default
     );
