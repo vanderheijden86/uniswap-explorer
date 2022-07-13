@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getPools } from "../repos/uniswap";
 import { Pool } from "../common/types";
 
-const usePoolsOverview = () => {
+export default function usePoolsOverview(): Pool[] {
   const [pools, setPools] = useState<Pool[]>([]);
 
   const fetchPools = async () => {
@@ -17,5 +17,3 @@ const usePoolsOverview = () => {
 
   return pools
 };
-
-export default usePoolsOverview;
