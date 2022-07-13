@@ -6,7 +6,7 @@ better understand React in general and building a front-end app that interfaces 
 
 Under the hood it:
 - Uses [web3-react](https://github.com/NoahZinsmeister/web3-react) to easily connect to Web3 providers.
-- Uses React hooks to fetch and catch data from Contracts and optimize performance using [SWR](https://swr.vercel.app)  
+- Uses React hooks to fetch and cache data from Contracts and optimize performance using [SWR](https://swr.vercel.app)  
 - Allows you to generate types for the contract ABIs using [TypeChain](https://github.com/ethereum-ts/TypeChain) in 
   the `./contracts` folder.
 - Queries the [UniswapV3 subgraph](https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3) using GraphQL.
