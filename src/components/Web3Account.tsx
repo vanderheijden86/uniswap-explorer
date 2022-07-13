@@ -33,6 +33,9 @@ const Account = ({ triedToEagerConnect }: AccountProps) => {
   const ENSName = useENSName(account);
 
   if (error) {
+    // for debugging purposes now make the errors visible on screen
+    console.log(error.message)
+    alert(error.message)
     return null;
   }
 
