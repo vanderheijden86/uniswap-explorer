@@ -1,9 +1,9 @@
 import useSWR from "swr";
-import type { ERC20 } from "../../contracts/types";
+import type { IERC20 } from "../../contracts/types";
 import useKeepSWRDataLiveAsBlocksArrive from "./useKeepSWRDataLiveAsBlocksArrive";
 import useTokenContract from "./useTokenContract";
 
-function getTokenBalance(contract: ERC20) {
+function getTokenBalance(contract: IERC20) {
   return async (_: string, address: string) => {
     const balance = await contract.balanceOf(address);
 
@@ -25,7 +25,7 @@ export default function useTokenBalance(
 
   const result = useSWR(
     shouldFetch ? ["TokenBalance", address, tokenAddress] : null,
-    getTokenBalance(contract as ERC20),
+    getTokenBalance(contract as IERC20),
     {
       suspense,
     }

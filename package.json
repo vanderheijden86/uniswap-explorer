@@ -9,7 +9,7 @@
     "test:coverage": "react-scripts test --coverage --runInBand --watchAll=false",
     "compile-contract-types": "typechain --target ethers-v5 --out-dir './contracts/types' './contracts/*.json'",
     "eject": "react-scripts eject",
-    "postinstall": "npm run compile-contract-types"
+    "postinstall": "hardhat compile"
   },
   "dependencies": {
     "@ethersproject/providers": "^5.6.8",

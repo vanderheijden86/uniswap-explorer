@@ -1,7 +1,7 @@
 import ERC20_ABI from "../../contracts/ERC20.json";
-import type { ERC20 } from "../../contracts/types";
+import type { IERC20 } from "../../contracts/types";
 import useContract from "./useContract";
 
 export default function useTokenContract(tokenAddress?: string) {
-  return useContract<ERC20>(tokenAddress as string, ERC20_ABI);
+  return useContract<IERC20>(tokenAddress as string, ERC20_ABI);
 }
