@@ -15,9 +15,11 @@ export default function useContract<T extends Contract = Contract>(
 
   return useMemo(() => {
     if (!address || !ABI || !library || !chainId) {
+      // TODO: Do we really want to return null when we get such an error?
       return null;
     }
 
+    // TODO: Do we really want to return null when we get such an error?
     try {
       return new Contract(address, ABI, library.getSigner(account));
     } catch (error) {

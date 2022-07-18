@@ -1,4 +1,4 @@
-import usePoolsOverview from "../hooks/usePoolsOverview";
+import usePoolsOverview from "../hooks/uniswap/usePoolsOverview";
 import Table from "react-bootstrap/Table";
 import "./PoolsOverview.css";
 import NumberFormat from 'react-number-format';

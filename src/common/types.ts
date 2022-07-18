@@ -1,3 +1,5 @@
+import { ethers } from "ethers";
+
 export interface Network {
   id: string;
   name: string;
@@ -36,5 +38,14 @@ export interface Tick {
   liquidityNet: string;
   price0: string;
   price1: string;
+}
+
+export interface Immutables {
+  factory: string
+  token0: string
+  token1: string
+  fee: number
+  tickSpacing: number
+  maxLiquidityPerTick: ethers.BigNumber
 }
 

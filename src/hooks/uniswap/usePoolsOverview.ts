@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { getPools } from "../repos/uniswap";
-import { Pool } from "../common/types";
+import { getPools } from "../../repos/uniswap";
+import { Pool } from "../../common/types";
 
 export default function usePoolsOverview(): Pool[] {
   const [pools, setPools] = useState<Pool[]>([]);
